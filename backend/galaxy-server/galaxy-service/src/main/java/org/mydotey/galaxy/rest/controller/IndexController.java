@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(path = "/api/index", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(path = "/api/home", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 public class IndexController {
 
     @RequestMapping(path = "/hello", method = RequestMethod.GET, consumes = MediaType.ALL_VALUE)
     public ViewResponse<String> hello(@RequestParam(name = "name", required = false) String name) {
         if (StringExtension.isBlank(name))
             name = "world";
-        return ViewResponse.success(name);
+        return ViewResponse.success("Hello " + name + "!");
     }
 
 }
