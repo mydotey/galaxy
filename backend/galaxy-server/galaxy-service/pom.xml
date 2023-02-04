@@ -18,6 +18,11 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
             <groupId>org.mydotey.galaxy</groupId>
             <artifactId>galaxy-common</artifactId>
         </dependency>

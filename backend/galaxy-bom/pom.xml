@@ -35,6 +35,7 @@
     <properties>
         <java.version>11</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <lombok.version>1.18.26</lombok.version>
         <slf4j.version>1.7.36</slf4j.version>
         <guava.version>30.1-jre</guava.version>
         <lang-extension.version>1.2.1</lang-extension.version>
@@ -42,6 +43,16 @@
         <junit.version>4.13.2</junit.version>
         <spring.version>5.3.25</spring.version>
         <spring-boot.version>2.7.8</spring-boot.version>
+        <rpc-util.version>1.3.1</rpc-util.version>
+        <codec-util.version>1.1.0</codec-util.version>
+        <caravan-util.version>2.0.3</caravan-util.version>
+        <caravan-hystrix.version>2.0.0</caravan-hystrix.version>
+        <caravan-web.version>2.0.0</caravan-web.version>
+        <circular-buffer.version>1.0.0</circular-buffer.version>
+        <cascaded-key-map.version>1.0.0</cascaded-key-map.version>
+        <quantile-estimator.version>1.0.2</quantile-estimator.version>
+        <mydotey-objectpool.version>1.0.1</mydotey-objectpool.version>
+        <spring-boot-starter-artemis.version>0.1.2</spring-boot-starter-artemis.version>
         <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
         <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
         <maven-javadoc-plugin.version>3.4.1</maven-javadoc-plugin.version>
@@ -52,6 +63,11 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
@@ -88,6 +104,60 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
                 <version>${spring-boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mydotey.rpc</groupId>
+                <artifactId>rpc-util-bom</artifactId>
+                <version>${rpc-util.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.mydotey.codec</groupId>
+                <artifactId>codec-util-bom</artifactId>
+                <version>${codec-util.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.mydotey.caravan</groupId>
+                <artifactId>caravan-util</artifactId>
+                <version>${caravan-util.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mydotey.caravan</groupId>
+                <artifactId>caravan-hystrix</artifactId>
+                <version>${caravan-hystrix.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mydotey.caravan</groupId>
+                <artifactId>caravan-web</artifactId>
+                <version>${caravan-web.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mydotey.circularbuffer</groupId>
+                <artifactId>circular-buffer</artifactId>
+                <version>${circular-buffer.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mydotey.cascadedkeymap</groupId>
+                <artifactId>cascaded-key-map</artifactId>
+                <version>${cascaded-key-map.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mydotey.quantile</groupId>
+                <artifactId>quantile-estimator</artifactId>
+                <version>${quantile-estimator.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mydotey.objectpool</groupId>
+                <artifactId>mydotey-objectpool</artifactId>
+                <version>${mydotey-objectpool.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mydotey.artemis</groupId>
+                <artifactId>spring-boot-starter-artemis</artifactId>
+                <version>${spring-boot-starter-artemis.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
