@@ -1,4 +1,4 @@
-package org.mydotey.galaxy.app.rest.controller;
+package org.mydotey.galaxy.rest.controller;
 
 import org.mydotey.galaxy.vo.ViewResponse;
 import org.mydotey.java.StringExtension;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(path = "/", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(path = "/api/index", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 public class IndexController {
 
     @RequestMapping(path = "/hello", method = RequestMethod.GET, consumes = MediaType.ALL_VALUE)
