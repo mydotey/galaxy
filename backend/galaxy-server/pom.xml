@@ -33,7 +33,7 @@
 
     <properties>
         <java.version>11</java.version>
-        <source.encoding>UTF-8</source.encoding>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <galaxy-bom.version>0.0.1-SNAPSHOT</galaxy-bom.version>
         <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
         <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
@@ -81,7 +81,7 @@
                     <configuration>
                         <source>${java.version}</source>
                         <target>${java.version}</target>
-                        <encoding>${source.encoding}</encoding>
+                        <encoding>${project.build.sourceEncoding}</encoding>
                     </configuration>
                 </plugin>
                 <plugin>
