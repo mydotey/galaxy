@@ -16,7 +16,7 @@ public class IndexController {
     public ViewResponse<String> hello(@RequestParam(name = "name", required = false) String name) {
         if (StringExtension.isBlank(name))
             name = "world";
-        return ViewResponse.success("Hello " + name + "!");
+        return ViewResponse.success("Hello, " + name + "!");
     }
 
 }
