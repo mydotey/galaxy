@@ -1,5 +1,5 @@
 <script setup>
-import { useRouter,useRoute } from 'vue-router'
+import { useRoute } from 'vue-router'
 var key = useRoute().path
 </script>
 
