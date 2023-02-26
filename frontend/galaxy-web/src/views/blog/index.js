@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import { BlogLayout } from '@/layout'
+import Layout from '@/layout'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -11,15 +11,13 @@ const router = createRouter({
     },
     {
       path: '/blog',
-      name: 'blog',
-      component: BlogLayout,
-      children: [
-        {
-          path: 'all',
-          component: () => import('@/views/blog/All.vue')
-        }
-      ]
-    },
+      name: 'Blog',
+      component: Layout,
+      children: {
+        path: 'all',
+        component: () => import('@/views/blog/All.vue')
+      }
+    }
   ]
 })
 
