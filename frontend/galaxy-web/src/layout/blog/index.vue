@@ -1,5 +1,7 @@
 <script setup>
-import { Navbar, AppMain, Sidebar } from './components'
+import { Navbar } from './components'
+import { AppMain } from './components'
+import { Sidebar } from './components'
 </script>
 
 <template>
